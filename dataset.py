@@ -14,7 +14,7 @@ class ClrDataset(Dataset):
     def __getitem__(self, idx):
         label = self.dataframe.iloc[idx, -3]
         time_series = self.t_df.iloc[idx, :].values
-        time_series = torch.tensor(time_series, dtype=torch.float32).unsqueeze(0)  # 시퀀스 길이 차원 추가
+        time_series = torch.tensor(time_series, dtype=torch.float32).unsqueeze(0)
 
         img_path = self.dataframe.iloc[idx, -2]  # GASF
         image = Image.open(img_path).convert('RGB')
