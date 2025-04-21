@@ -21,5 +21,5 @@ def plot_loss_over_epochs(epochs,status,value, loss_or_acc, data_name):
     plt.xlabel('Epoch')
     plt.ylabel('Loss')
     plt.title(data_name + '_' + status +'_' + loss_or_acc)
-    plt.savefig("/dshome/ddualab/yohan/clr/model/{}_plot_{}_{}.png".format(data_name, status, loss_or_acc))
+    plt.savefig("./{}_plot_{}_{}.png".format(data_name, status, loss_or_acc))
     plt.clf()
